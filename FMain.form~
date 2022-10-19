@@ -4,7 +4,7 @@
   MoveScaled(0,0,56,35)
   Font = Font["-2"]
   Background = &HBFBFBF&
-  Text = ("zip")
+  Text = ("androd forms")
   { Label1 Label
     MoveScaled(1,1,11,3)
     Text = ("file name:")
