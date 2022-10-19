@@ -1,0 +1,90 @@
+' Gambas class file
+
+
+
+Sub closes(a As String)
+Print "closes"
+	Shell ("bash -c 'cat " & Application.Path & "//1' >>" & Application.Path & "//" & a)
+End Sub 
+Sub texts(a As String)
+Print "texts"
+Shell ("bash -c 'cat " & Application.Path & "//2' >>" & Application.Path & "//" & a)
+	
+End Sub 
+Sub buttons(a As String)
+	Print "buttons"
+	Shell ("bash -c 'cat " & Application.Path & "//3' >>" & Application.Path & "//" & a)
+End Sub 
+Sub lists(a As String)
+Print "lists"
+Shell ("bash -c 'cat " & Application.Path & "//4' >>" & Application.Path & "//" & a)
+	
+End Sub 
+Sub edits(a As String)
+	Print "edits"
+	Shell ("bash -c 'cat " & Application.Path & "//5' >>" & Application.Path & "//" & a)
+	
+End Sub 
+
+
+
+Public Sub form_Close()
+  
+  
+  
+End
+
+Public Sub Form_Open()
+
+End
+
+
+Public Sub Button1_Click()
+
+  ListBox1.Add("text_view")
+
+End
+
+Public Sub Button2_Click()
+
+   ListBox1.Add("button")
+
+End
+
+Public Sub Button3_Click()
+
+    ListBox1.Add("list")
+
+End
+
+Public Sub Button4_Click()
+
+    ListBox1.Add("edit_text")
+
+End
+
+Public Sub ListBox1_Click()
+
+  ListBox1.Remove(ListBox1.Index)
+
+End
+
+Public Sub Button5_Click()
+
+  ListBox1.Clear()
+
+End
+
+Public Sub Button6_Click()
+Dim n As Integer
+  Print Application.Path
+  Shell "bash -c 'cp " & Application.Path & "//0 " & Application.Path & "//" & TextBox1.Text & "'"
+  For n = 0 To ListBox1.List.Count - 1
+    If ListBox1.List[n] = "text_view" Then texts(TextBox1.Text)
+    If ListBox1.List[n] = "button" Then buttons(TextBox1.Text)
+    If ListBox1.List[n] = "list" Then lists(TextBox1.Text)
+    If ListBox1.List[n] = "edit_text" Then edits(TextBox1.Text)
+    Sleep(0.5)
+   Next
+closes(TextBox1.Text)
+End

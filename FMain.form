@@ -1,0 +1,43 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,56,35)
+  Font = Font["-2"]
+  Background = &HBFBFBF&
+  Text = ("androd forms")
+  { Label1 Label
+    MoveScaled(1,1,11,3)
+    Text = ("file name:")
+  }
+  { TextBox1 TextBox
+    MoveScaled(13,1,36,3)
+    Text = ("new.xml")
+  }
+  { ListBox1 ListBox
+    MoveScaled(1,5,33,15)
+  }
+  { Button1 Button
+    MoveScaled(37,5,17,3)
+    Text = ("text view")
+  }
+  { Button2 Button
+    MoveScaled(37,8,17,3)
+    Text = ("button")
+  }
+  { Button3 Button
+    MoveScaled(37,11,17,3)
+    Text = ("list")
+  }
+  { Button4 Button
+    MoveScaled(37,14,17,3)
+    Text = ("edit view")
+  }
+  { Button5 Button
+    MoveScaled(1,20,19,3)
+    Text = ("clear")
+  }
+  { Button6 Button
+    MoveScaled(1,26,40,4)
+    Text = ("build")
+  }
+}
